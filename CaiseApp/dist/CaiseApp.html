@@ -1,0 +1,45 @@
+<html><head>
+  <SCRIPT src="http://java.com/js/dtjava.js"></SCRIPT>
+<script>
+    function launchApplication(jnlpfile) {
+        dtjava.launch(            {
+                url : 'CaiseApp.jnlp',
+                jnlp_content : 'PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPGpubHAgc3BlYz0iMS4wIiB4bWxuczpqZng9Imh0dHA6Ly9qYXZhZnguY29tIiBocmVmPSJDYWlzZUFwcC5qbmxwIj4KICA8aW5mb3JtYXRpb24+CiAgICA8dGl0bGU+Q2Fpc2VBcHA8L3RpdGxlPgogICAgPHZlbmRvcj5tYWNib29rcHJvPC92ZW5kb3I+CiAgICA8ZGVzY3JpcHRpb24+bnVsbDwvZGVzY3JpcHRpb24+CiAgICA8b2ZmbGluZS1hbGxvd2VkLz4KICA8L2luZm9ybWF0aW9uPgogIDxyZXNvdXJjZXM+CiAgICA8ajJzZSB2ZXJzaW9uPSIxLjYrIiBocmVmPSJodHRwOi8vamF2YS5zdW4uY29tL3Byb2R1Y3RzL2F1dG9kbC9qMnNlIi8+CiAgICA8amFyIGhyZWY9IkNhaXNlQXBwLmphciIgc2l6ZT0iOTQ3NzEiIGRvd25sb2FkPSJlYWdlciIgLz4KICAgIDxqYXIgaHJlZj0ibGliL2ZvbnRhd2Vzb21lZngtOC45LmphciIgc2l6ZT0iNTcxMDY4IiBkb3dubG9hZD0iZWFnZXIiIC8+CiAgICA8amFyIGhyZWY9ImxpYi9qZm9lbml4LTguMC4xMC5qYXIiIHNpemU9IjI3MTAyMDciIGRvd25sb2FkPSJlYWdlciIgLz4KICAgIDxqYXIgaHJlZj0ibGliL215c3FsLWNvbm5lY3Rvci1qYXZhLTguMC4yOS5qYXIiIHNpemU9IjI1MTk1NDciIGRvd25sb2FkPSJlYWdlciIgLz4KICAgIDxqYXIgaHJlZj0ibGliL3NxbGl0ZS1qZGJjLTMuNy4yLmphciIgc2l6ZT0iMzIwMTEzMyIgZG93bmxvYWQ9ImVhZ2VyIiAvPgogIDwvcmVzb3VyY2VzPgogIDxqZng6amF2YWZ4LWRlc2MgIHdpZHRoPSI4MDAiIGhlaWdodD0iNjAwIiBtYWluLWNsYXNzPSJjYWlzZWFwcC5DYWlzZUFwcCIgIG5hbWU9IkNhaXNlQXBwIiAvPgogIDx1cGRhdGUgY2hlY2s9ImFsd2F5cyIvPgo8L2pubHA+Cg=='
+            },
+            {
+                javafx : '8.0+'
+            },
+            {}
+        );
+        return false;
+    }
+</script>
+
+<script>
+    function javafxEmbedcaiseapp() {
+        dtjava.embed(
+            {
+                id : 'caiseapp',
+                url : 'CaiseApp.jnlp',
+                placeholder : 'javafx-app-placeholder',
+                width : '800',
+                height : '600',
+                jnlp_content : 'PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPGpubHAgc3BlYz0iMS4wIiB4bWxuczpqZng9Imh0dHA6Ly9qYXZhZnguY29tIiBocmVmPSJDYWlzZUFwcC5qbmxwIj4KICA8aW5mb3JtYXRpb24+CiAgICA8dGl0bGU+Q2Fpc2VBcHA8L3RpdGxlPgogICAgPHZlbmRvcj5tYWNib29rcHJvPC92ZW5kb3I+CiAgICA8ZGVzY3JpcHRpb24+bnVsbDwvZGVzY3JpcHRpb24+CiAgICA8b2ZmbGluZS1hbGxvd2VkLz4KICA8L2luZm9ybWF0aW9uPgogIDxyZXNvdXJjZXM+CiAgICA8ajJzZSB2ZXJzaW9uPSIxLjYrIiBocmVmPSJodHRwOi8vamF2YS5zdW4uY29tL3Byb2R1Y3RzL2F1dG9kbC9qMnNlIi8+CiAgICA8amFyIGhyZWY9IkNhaXNlQXBwLmphciIgc2l6ZT0iOTQ3NzEiIGRvd25sb2FkPSJlYWdlciIgLz4KICAgIDxqYXIgaHJlZj0ibGliL2ZvbnRhd2Vzb21lZngtOC45LmphciIgc2l6ZT0iNTcxMDY4IiBkb3dubG9hZD0iZWFnZXIiIC8+CiAgICA8amFyIGhyZWY9ImxpYi9qZm9lbml4LTguMC4xMC5qYXIiIHNpemU9IjI3MTAyMDciIGRvd25sb2FkPSJlYWdlciIgLz4KICAgIDxqYXIgaHJlZj0ibGliL215c3FsLWNvbm5lY3Rvci1qYXZhLTguMC4yOS5qYXIiIHNpemU9IjI1MTk1NDciIGRvd25sb2FkPSJlYWdlciIgLz4KICAgIDxqYXIgaHJlZj0ibGliL3NxbGl0ZS1qZGJjLTMuNy4yLmphciIgc2l6ZT0iMzIwMTEzMyIgZG93bmxvYWQ9ImVhZ2VyIiAvPgogIDwvcmVzb3VyY2VzPgogIDxqZng6amF2YWZ4LWRlc2MgIHdpZHRoPSI4MDAiIGhlaWdodD0iNjAwIiBtYWluLWNsYXNzPSJjYWlzZWFwcC5DYWlzZUFwcCIgIG5hbWU9IkNhaXNlQXBwIiAvPgogIDx1cGRhdGUgY2hlY2s9ImFsd2F5cyIvPgo8L2pubHA+Cg=='
+            },
+            {
+                javafx : '8.0+'
+            },
+            {}
+        );
+    }
+    <!-- Embed FX application into web page once page is loaded -->
+    dtjava.addOnloadCallback(javafxEmbedcaiseapp);
+</script>
+
+</head><body>
+<h2>Test page for <b>CaiseApp</b></h2>
+  <b>Webstart:</b> <a href='CaiseApp.jnlp' onclick="return launchApplication('CaiseApp.jnlp');">click to launch this app as webstart</a><br><hr><br>
+
+  <!-- Applet will be inserted here -->
+  <div id='javafx-app-placeholder'></div>
+</body></html>

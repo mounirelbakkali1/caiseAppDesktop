@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="620.0" prefWidth="994.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="caiseapp.FXMLDocumentController">
+   <children>
+      <HBox layoutY="-1.0" prefHeight="585.0" prefWidth="999.0" spacing="10.0">
+         <children>
+            <AnchorPane fx:id="left" prefHeight="585.0" prefWidth="603.0" style="-fx-background-color: lightgrey;">
+               <children>
+                  <VBox layoutX="-1.0" prefHeight="585.0" prefWidth="603.0" style="-fx-background-color: #212222;">
+                     <children>
+                        <HBox prefHeight="32.0" prefWidth="603.0" style="-fx-background-color: black;">
+                           <children>
+                              <ImageView fitHeight="45.0" fitWidth="52.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../img/icons8-touch-gesture-99.png" />
+                                 </image>
+                                 <HBox.margin>
+                                    <Insets left="10.0" />
+                                 </HBox.margin>
+                              </ImageView>
+                              <Label id="title" alignment="CENTER" prefHeight="45.0" prefWidth="548.0" style="-fx-font-weight: 300;" text="GESTION DE CAISE" textFill="#2bff00">
+                                 <font>
+                                    <Font name="Arial Hebrew Bold" size="18.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <Label alignment="CENTER" prefHeight="32.0" prefWidth="603.0" style="-fx-background-color: #212222;" text="List de commandes" textFill="WHITE" />
+                        <TableView fx:id="tableItems" prefHeight="534.0" prefWidth="603.0">
+                          <columns>
+                            <TableColumn id="bgclomn" fx:id="selectAllColumn" prefWidth="100.0" styleClass="bgclomn">
+                                 <graphic>
+                                    <JFXButton prefHeight="22.0" prefWidth="104.0" text="Selectioner tout" wrapText="true">
+                                       <font>
+                                          <Font name="Arial" size="11.0" />
+                                       </font>
+                                    </JFXButton>
+                                 </graphic>
+                              </TableColumn>
+                            <TableColumn id="bgcolumn" fx:id="quantityCol" prefWidth="83.0" styleClass="bgcolumn" text="Quantité" />
+                              <TableColumn id="bgcolumn" fx:id="ItemCol" prefWidth="150.0" styleClass="bgcolumn" text="Élément" />
+                              <TableColumn id="bgcolumn" fx:id="priceCol" prefWidth="114.0" styleClass="bgcolumn" text="Prix" />
+                              <TableColumn id="bgcolumn" fx:id="amountCol" prefWidth="155.0" styleClass="bgcolumn" text="Montant" />
+                          </columns>
+                        </TableView>
+                        <HBox fx:id="hBoxLeft" prefHeight="54.0" prefWidth="603.0" spacing="10.0" style="-fx-background-color: lightgrey;">
+                           <padding>
+                              <Insets bottom="10.0" left="20.0" top="5.0" />
+                           </padding>
+                           <children>
+                              <JFXTextField fx:id="searchbyIdTextField" alignment="CENTER" focusColor="#2fff00" prefHeight="27.0" prefWidth="539.0" promptText="recherchez par numéro de commande">
+                                 <padding>
+                                    <Insets left="10.0" />
+                                 </padding>
+                                 <font>
+                                    <Font size="9.0" />
+                                 </font>
+                              </JFXTextField>
+                              <JFXButton alignment="CENTER" onAction="#search" prefHeight="27.0" prefWidth="66.0" text="." textFill="WHITE">
+                                 <graphic>
+                                    <ImageView fitHeight="17.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../img/icons8-search-50%20(1).png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <HBox.margin>
+                                    <Insets left="20.0" right="20.0" top="3.0" />
+                                 </HBox.margin>
+                              </JFXButton>
+                           </children>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="55.0" prefWidth="603.0" spacing="10.0" style="-fx-background-color: #212222;" />
+                     </children>
+                  </VBox>
+               </children>
+            </AnchorPane>
+            <VBox prefHeight="585.0" prefWidth="354.0">
+               <children>
+                  <VBox alignment="TOP_CENTER" prefHeight="586.0" prefWidth="343.0">
+                     <children>
+                        <Label alignment="CENTER" prefHeight="52.0" prefWidth="350.0" style="-fx-border-color: #212222; -fx-border-width: 5;" text="TOTAL À PAYER">
+                           <font>
+                              <Font name="Arial Bold" size="19.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="amountLabel" alignment="CENTER" prefHeight="44.0" prefWidth="350.0" style="-fx-background-color: #212222;" text="0.00      DH" textFill="#2bff00">
+                           <font>
+                              <Font name="Arial Black" size="26.0" />
+                           </font>
+                        </Label>
+                        <AnchorPane prefHeight="487.0" prefWidth="347.0" style="-fx-background-color: #212222;">
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                           <children>
+                              <JFXButton layoutX="5.0" layoutY="109.0" prefHeight="45.0" prefWidth="337.0" style="-fx-background-color: white; -fx-border-color: white;" text="MODE DE PAYEMENT">
+                                 <font>
+                                    <Font name="Arial Bold" size="19.0" />
+                                 </font></JFXButton>
+                              <JFXButton layoutX="3.0" layoutY="294.0" prefHeight="67.0" prefWidth="340.0" style="-fx-background-color: black;" text="." textFill="#51ff00">
+                                 <graphic>
+                                    <HBox prefHeight="55.0" prefWidth="217.0">
+                                       <children>
+                                          <ImageView fitHeight="72.0" fitWidth="51.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../img/icons8-card-payment-100.png" />
+                                             </image>
+                                          </ImageView>
+                                          <Label alignment="CENTER" prefHeight="53.0" prefWidth="165.0" text="Cart Banciare" textFill="#2bff00">
+                                             <font>
+                                                <Font name="Arial Hebrew Bold" size="18.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                 </graphic>
+                              </JFXButton>
+                              <JFXButton layoutX="4.0" layoutY="191.0" prefHeight="67.0" prefWidth="338.0" style="-fx-background-color: black;" text="." textFill="#2bff00">
+                                 <graphic>
+                                    <HBox prefHeight="55.0" prefWidth="217.0">
+                                       <children>
+                                          <ImageView fitHeight="41.0" fitWidth="44.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../img/icons8-cash-100.png" />
+                                             </image>
+                                             <HBox.margin>
+                                                <Insets left="8.0" top="8.0" />
+                                             </HBox.margin>
+                                          </ImageView>
+                                          <Label alignment="CENTER" prefHeight="53.0" prefWidth="160.0" text="Espèce" textFill="#2bff00">
+                                             <font>
+                                                <Font name="Arial Hebrew Bold" size="18.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                 </graphic>
+                              </JFXButton>
+                              <ImageView fitHeight="54.0" fitWidth="130.0" layoutX="47.0" layoutY="429.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../img/png-removebg-preview.png" />
+                                 </image>
+                              </ImageView>
+                              <JFXButton layoutX="185.0" layoutY="435.0" prefHeight="41.0" prefWidth="131.0" style="-fx-border-color: #36b72a; -fx-border-radius: 5; -fx-border-width: 1.5;" text="Valider" textFill="#33b526" />
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </VBox>
+               </children>
+            </VBox>
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <padding>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </padding>
+      </HBox>
+   </children>
+   <opaqueInsets>
+      <Insets />
+   </opaqueInsets>
+</AnchorPane>

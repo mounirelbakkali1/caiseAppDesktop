@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="CaiseApp.jnlp">
+  <information>
+    <title>CaiseApp</title>
+    <vendor>macbookpro</vendor>
+    <description>null</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="CaiseApp.jar" size="94771" download="eager" />
+    <jar href="lib/fontawesomefx-8.9.jar" size="571068" download="eager" />
+    <jar href="lib/jfoenix-8.0.10.jar" size="2710207" download="eager" />
+    <jar href="lib/mysql-connector-java-8.0.29.jar" size="2519547" download="eager" />
+    <jar href="lib/sqlite-jdbc-3.7.2.jar" size="3201133" download="eager" />
+  </resources>
+  <jfx:javafx-desc  width="800" height="600" main-class="caiseapp.CaiseApp"  name="CaiseApp" />
+  <update check="always"/>
+</jnlp>
